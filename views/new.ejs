@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Message</title>
+  </head>
+  <body>
+    <h1>Create a Message</h1>
+
+    <form action="/new" method="POST">
+      <div>
+        <label for="username">Your name:</label>
+
+        <input
+          type="text"
+          id="username"
+          name="username"
+          maxlength="255"
+          required
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="text">Your message:</label>
+
+        <textarea id="text" name="text" maxlength="5000" required></textarea>
+      </div>
+
+      <br />
+
+      <button type="submit">Submit Message</button>
+    </form>
+
+    <p><a href="/">Back to homepage</a></p>
+  </body>
+</html>

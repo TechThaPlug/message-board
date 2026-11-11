@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Message Board</title>
+</head>
+<body>
+    <h1>Welcome to My Message Board!</h1>
+
+    <a href="/new">Create a new message</a>
+
+    <h2>All Messages</h2>
+
+    <% if (messages.length === 0) { %>
+        <p>No messages yet. Be the first!</p>
+    <% } %>
+
+    <% messages.forEach(message => { %>
+        <div>
+            <h3><%= message.username %></h3>
+
+            <p><%= message.text %></p>
+
+            <small>
+                <%= new Date(message.added).toLocaleString() %>
+            </small>
+
+            <p>
+                <a href="/message/<%= message.id %>">
+                    View message
+                </a>
+            </p>
+
+            <hr>
+        </div>
+    <% }) %>
+
+</body>
+</html>

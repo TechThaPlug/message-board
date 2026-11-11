@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View Message</title>
+  </head>
+  <body>
+    <h1>Message Details</h1>
+
+    <h2><%= message.username %></h2>
+
+    <p><%= message.text %></p>
+
+    <small> Posted on: <%= new Date(message.added).toLocaleString() %> </small>
+
+    <p><a href="/">Back to messages</a></p>
+  </body>
+</html>
